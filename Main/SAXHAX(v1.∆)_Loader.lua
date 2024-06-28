@@ -17,7 +17,20 @@ OMG1:AddSlider("MySlidet",{Text="WalkSpeed",Min=16,Max=21,Default=16,Rouding=1,C
 OMG1:AddSlider("MySlider",{Text="Field Of View",Min=70,Max=120,Default=70,Rouding=1,Compact=true,Callback=function(Value)FOV = Value end})
 OMG1:AddSlider("MySlider",{Text="JumpPower",Min=50,Max=75,Default=75,Rouding=1,Compact=true,Callback=function(Value)Jump = Value end})
 OMG1:AddToggle("MyToggle",{Text="God Mode Upper",Default=false,Callback=function(Value)
+if Value then
+local Collison = game.Players.LocalPlayer.Character:FindFirstChild("Collision")
+Collison.Position = Collison.Position - Vector3.new(0,-20,0)
+else
+local Collison = game.Players.LocalPlayer.Character:FindFirstChild("Collision")
+Collison.Position = Collison.Position - Vector3.new(0,20,0)
+        end
 end})
 OMG1:AddToggle("MyToggle",{Text="God Mode Lower",Default=false,Callback=function(Value)
+if Value then
+local Collison = game.Players.LocalPlayer.Character:FindFirstChild("Collision")
+Collison.Position = Collison.Position - Vector3.new(0,10,0)
+else
+local Collison = game.Players.LocalPlayer.Character:FindFirstChild("Collision")
+Collison.Position = Collison.Position - Vector3.new(0,-10,0)end
 end})
 
