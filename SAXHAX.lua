@@ -168,4 +168,6 @@ for _, v in pairs(workspace.CurrentRooms:GetDescendants()) do
 			end)
 			end})
 WTF2 = UI:AddTab("Cheat")
-NAH = UI:AddRightTabbox();local OMG2 = NAH:AddTab("[>Remove<]");
+NAH = WTF2:AddRightTabbox();
+local OMG3 = NAH:AddTab("Anti Entities");
+local OMG3 = NAH:AddTab("Destroy Entity")
