@@ -213,3 +213,25 @@ v:Destroy()
 			end
 		end})
 				
+OMG5:AddToggle("MyToggle",{Text="Destroy Rush But Can Kill",Default=false,Callback=function(v1)
+if v1 then
+for _, v in pairs(workspace:GetDescendants()) do
+	if v.Name == "RushMoving" then
+v:Destroy()
+		end
+	end
+			else
+		v:Disconnect()
+			end
+		end})
+OMG5:AddToggle("MyToggle",{Text="Destroy Ambush But Can Kill",Default=false,Callback=function(v1)
+if v1 then
+for _, v in pairs(workspace:GetDescendants()) do
+	if v.Name == "AmbushMoving" then
+v:Destroy()
+		end
+	end
+			else
+		v:Disconnect()
+			end
+		end})
