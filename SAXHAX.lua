@@ -198,3 +198,18 @@ task.wait(1)
 if child.Name == "Drakobloxxer" then child:Destroy() for _, v in pairs(workspace:GetChildren()) do if v.Name == "Sound" and v:IsA("Sound") then v:Destroy() end end end end) else DrakoBloxxers:Disconnect() end end})
 game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if _G.MSHNL then if game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets"):FindFirstChild("Chandelier") then game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets").Chandelier:Destroy();end end end);end);game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if _G.MSHNL then if game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets"):FindFirstChild("Light_Fixtures") then game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets").Light_Fixtures:Destroy();end end end);end)
 OMG4:AddToggle("Nlight",{Text = "Destroy Light",Default = false,Tooltip = "No Light",Callback = function(NL)_G.MSHNL = NL ;end})
+OMG5 = WTF2:AddRightGroupbox("Miscarriage Of Cheat")
+OMG5:AddToggle("MyToggle",{Text="Destroy Door Wardrobe",Default=false,Callback=function(v1)
+if v1 then
+for _, v in pairs(workspace:GetDescendants()) do
+	if v.Name == "Door1" then
+v:Destroy()
+	elseif v.Name == "Door2" then
+v:Destroy()
+		end
+	end
+			else
+		v:Disconnect()
+			end
+		end})
+				
