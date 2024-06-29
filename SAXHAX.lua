@@ -201,37 +201,37 @@ OMG4:AddToggle("Nlight",{Text = "Destroy Light",Default = false,Tooltip = "No Li
 OMG5 = WTF2:AddRightGroupbox("Miscarriage Of Cheat")
 OMG5:AddToggle("MyToggle",{Text="Destroy Door Wardrobe",Default=false,Callback=function(v1)
 if v1 then
-for _, v in pairs(workspace:GetDescendants()) do
+Wardrobe = workspace.ChildAdded:Connect(function(v)
 	if v.Name == "Door1" then
 v:Destroy()
-	elseif v.Name == "Door2" then
-v:Destroy()
-		end
-	end
+						elseif v.Name == "Door2" then
+v:Destroy()						
+			end
 			else
-		v:Disconnect()
+		Wardrobe:Disconnect()
+			end)
 			end
 		end})
 				
 OMG5:AddToggle("MyToggle",{Text="Destroy Rush But Can Kill",Default=false,Callback=function(v1)
 if v1 then
-for _, v in pairs(workspace:GetDescendants()) do
+Rush = workspace.ChildAdded:Connect(function(v)
 	if v.Name == "RushMoving" then
 v:Destroy()
-		end
-	end
+			end
 			else
-		v:Disconnect()
+		Rush:Disconnect()
+			end)
 			end
 		end})
 OMG5:AddToggle("MyToggle",{Text="Destroy Ambush But Can Kill",Default=false,Callback=function(v1)
 if v1 then
-for _, v in pairs(workspace:GetDescendants()) do
+Ambush = workspace.ChildAdded:Connect(function(v)
 	if v.Name == "AmbushMoving" then
 v:Destroy()
-		end
-	end
+			end
 			else
-		v:Disconnect()
+		Ambush:Disconnect()
+			end)
 			end
 		end})
