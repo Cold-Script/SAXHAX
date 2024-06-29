@@ -198,3 +198,50 @@ task.wait(1)
 if child.Name == "Drakobloxxer" then child:Destroy() for _, v in pairs(workspace:GetChildren()) do if v.Name == "Sound" and v:IsA("Sound") then v:Destroy() end end end end) else DrakoBloxxers:Disconnect() end end})
 game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if _G.MSHNL then if game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets"):FindFirstChild("Chandelier") then game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets").Chandelier:Destroy();end end end);end);game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if _G.MSHNL then if game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets"):FindFirstChild("Light_Fixtures") then game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Assets").Light_Fixtures:Destroy();end end end);end)
 OMG4:AddToggle("Nlight",{Text = "Destroy Light",Default = false,Tooltip = "No Light",Callback = function(NL)_G.MSHNL = NL ;end})
+OMG5 = WTF2:AddRightGroupbox("Misc")
+local Toggle = OMG5:AddButton({Text = "Instant Destroy Door Wardrobe",Default = false,Tooltip = "",Func = function(Value)
+spawn(function()
+         while task.wait(1) do
+for _,v in pairs(workspace:GetDescendants()) do
+if v.Name == "Door1" then
+v:Destroy()
+elseif v.Name == "Door2" then
+v:Destroy()
+end
+end
+end
+end)
+end})
+local Toggle = OMG5:AddButton({Text = "Instant Destroy Rush But Can Kill",Default = false,Tooltip = "",Func = function(Value)
+spawn(function()
+         while task.wait(1) do
+for _,v in pairs(workspace:GetDescendants()) do
+if v.Name == "RushMoving" then
+v:Destroy()
+end
+end
+end
+end)
+end})
+local Toggle = OMG5:AddButton({Text = "Instant Destroy Ambush But Can Kill",Default = false,Tooltip = "",Func = function(Value)
+spawn(function()
+         while task.wait(1) do
+for _,v in pairs(workspace:GetDescendants()) do
+if v.Name == "AmbushMoving" then
+v:Destroy()
+end
+end
+end
+end)
+end})
+local Toggle = OMG5:AddButton({Text = "Instant Destroy Blitz But Can Kill",Default = false,Tooltip = "",Func = function(Value)
+spawn(function()
+         while task.wait(1) do
+for _,v in pairs(workspace:GetDescendants()) do
+if v.Name == "BackdoorRush" then
+v:Destroy()
+end
+end
+end
+end)
+end})
