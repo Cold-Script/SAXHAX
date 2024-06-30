@@ -333,46 +333,46 @@ local Toggle = OMG6:AddButton({
 		for _, v in pairs(workspace:GetDescendants()) do
                 if v:IsA("BasePart") and v.Name == "Door" and v.Parent.Name == "Door" then
                     selection(v, "Door")
-		wait(0.5)
+		wait()
                 elseif v.Name == "KeyObtain" then
 		    selection(v, "Key")
-		wait(0.5)
+		wait()
                 elseif v.Name == "LiveHintBook" then
                     selection(v, "Book")
-		wait(0.5)
+		wait()
                 elseif v.Name == "Rooms_Locker" then
                     selection(v, "Locker")
-		wait(0.5)
+		wait()
                 elseif v.Name == "ClosetSpace" then
                     selection(v, "Vacuum")
-		wait(0.5)
+		wait()
                 elseif v.Name == "TimerLever" then
                     selection(v, "Timer Lever")
-		wait(0.5)
+		wait()
                 elseif v.Name == "BackdoorRush" then
                     selection(v, "Blitz")
-		wait(0.5)
+		wait()
                 elseif v.Name == "BackdoorLookman" then
                     selection(v, "Lookman")
-		wait(0.5)
+		wait()
                 elseif v.Name == "RushNew" then
                     selection(v, "Entity Moving")
-		wait(0.5)
+		wait()
                 elseif v.Name == "Eyes" then
                     selection(v, "Eyes")
-		wait(0.5)
+		wait(1)
                 elseif v.Name == "FigureRadoll" then
                     selection(v, "Figure")
-		wait(0.5)
+		wait()
                 elseif v.Name == "FigureSetup" then
                     selection(v, "Figure")
-		wait(0.5)
+		wait()
                elseif v.Name == "SeekMoving" then
                     selection(v, "Seek")
-		wait(0.5)
+		wait()
                elseif v.Name == "LiveBreakerPolePickup" then
                     selection(v, "Fuse")
-		wait(0.5)
+		wait()
 			end
 		end
 	end
