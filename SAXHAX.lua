@@ -250,6 +250,7 @@ local Toggle = OMG6:AddButton({
 	Text = "Visual ESP [No Item]",
 	Default = false,
 	Func = function(Value)
+	while wait(1) do
 		for _, v in pairs(workspace:GetDescendants()) do
 		if v.Name == "RetroWardrobe" then
 		    selection(v, "Closet")
@@ -283,8 +284,10 @@ local Toggle = OMG6:AddButton({
                     selection(v, "Figure")
                elseif v.Name == "SeekMoving" then
                     selection(v, "Seek")
-           
+               elseif v.Name == "LiveBreakerPolePickup" then
+                    selection(v, "Fuse")
 			end
 		end
-	end,
+	end
+end
 })
