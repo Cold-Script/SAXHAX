@@ -245,3 +245,46 @@ end
 end
 end)
 end})
+OMG6 = WTF2:AddRightGroupbox("Visual")
+local Toggle = OMG6:AddButton({
+	Text = "Visual ESP [No Item]",
+	Default = false,
+	Func = function(Value)
+		for _, v in pairs(workspace:GetDescendants()) do
+		if v.Name == "RetroWardrobe" then
+		    selection(v, "Closet")
+                elseif v.Name == "Backdoor_Wardrobe" then
+                    selection(v, "Closet")
+                elseif v.Name == "Wardrobe" then
+                    selection(v, "Closet")
+                elseif v:IsA("BasePart") and v.Name == "Door" and v.Parent.Name == "Door" then
+                    selection(v, "Door")
+                elseif v.Name == "KeyObtain" then
+		    selection(v, "Key")
+                elseif v.Name == "LiveHintBook" then
+                    selection(v, "Book")
+                elseif v.Name == "Rooms_Locker" then
+                    selection(v, "Locker")
+                elseif v.Name == "CloseSpace" then
+                    selection(v, "Vacuum")
+                elseif v.Name == "TimerLever" then
+                    selection(v, "Timer Lever")
+                elseif v.Name == "BackdoorRush" then
+                    selection(v, "Blitz")
+                elseif v.Name == "BackdoorLookman" then
+                    selection(v, "Lookman")
+                elseif v.Name == "RushNew" then
+                    selection(v, "Entity Moving")
+                elseif v.Name == "Eyes" then
+                    selection(v, "Eyes")
+                elseif v.Name == "FigureRadoll" then
+                    selection(v, "Figure")
+                elseif v.Name == "FigureSetup" then
+                    selection(v, "Figure")
+               elseif v.Name == "SeekMoving" then
+                    selection(v, "Seek")
+           
+			end
+		end
+	end,
+})
