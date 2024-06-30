@@ -4,7 +4,7 @@ local function billboard(child, name, name2, name3)
 	billboard_gui.AlwaysOnTop = true
 	billboard_gui.ClipsDescendants = true
 	billboard_gui.LightInfluence = 1
-	billboard_gui.Size = UDim2.new(10, 0, 5, 0)
+	billboard_gui.Size = UDim2.new(2, 0, 2, 0)
 	billboard_gui.ResetOnSpawn = false
 	billboard_gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	billboard_gui.Parent = child
@@ -327,43 +327,52 @@ OMG6 = WTF2:AddRightGroupbox("Visual")
 local Toggle = OMG6:AddButton({
 	Text = "Visual ESP [No Item]",
 	Default = false,
+	DoubleClick=true,
 	Func = function(Value)
 	while wait(1) do
 		for _, v in pairs(workspace:GetDescendants()) do
-		if v.Name == "RetroWardrobe" then
-		    selection(v, "Closet")
-                elseif v.Name == "Backdoor_Wardrobe" then
-                    selection(v, "Closet")
-                elseif v.Name == "Wardrobe" then
-                    selection(v, "Closet")
-                elseif v:IsA("BasePart") and v.Name == "Door" and v.Parent.Name == "Door" then
+                if v:IsA("BasePart") and v.Name == "Door" and v.Parent.Name == "Door" then
                     selection(v, "Door")
+		wait(0.5)
                 elseif v.Name == "KeyObtain" then
 		    selection(v, "Key")
+		wait(0.5)
                 elseif v.Name == "LiveHintBook" then
                     selection(v, "Book")
+		wait(0.5)
                 elseif v.Name == "Rooms_Locker" then
                     selection(v, "Locker")
-                elseif v.Name == "CloseSpace" then
+		wait(0.5)
+                elseif v.Name == "ClosetSpace" then
                     selection(v, "Vacuum")
+		wait(0.5)
                 elseif v.Name == "TimerLever" then
                     selection(v, "Timer Lever")
+		wait(0.5)
                 elseif v.Name == "BackdoorRush" then
                     selection(v, "Blitz")
+		wait(0.5)
                 elseif v.Name == "BackdoorLookman" then
                     selection(v, "Lookman")
+		wait(0.5)
                 elseif v.Name == "RushNew" then
                     selection(v, "Entity Moving")
+		wait(0.5)
                 elseif v.Name == "Eyes" then
                     selection(v, "Eyes")
+		wait(0.5)
                 elseif v.Name == "FigureRadoll" then
                     selection(v, "Figure")
+		wait(0.5)
                 elseif v.Name == "FigureSetup" then
                     selection(v, "Figure")
+		wait(0.5)
                elseif v.Name == "SeekMoving" then
                     selection(v, "Seek")
+		wait(0.5)
                elseif v.Name == "LiveBreakerPolePickup" then
                     selection(v, "Fuse")
+		wait(0.5)
 			end
 		end
 	end
