@@ -245,6 +245,8 @@ for _, v in pairs(workspace.CurrentRooms:GetDescendants()) do
 				end
 			end)
 			end})
+OMG9 = WTF1:AddLeftGroupbox("Warning Of SAXHAX")
+OMG9:AddLabel"On < God Mode > Just one of the two"
 WTF2 = UI:AddTab("Cheat")
 NAH = WTF2:AddLeftTabbox();
 local OMG3 = NAH:AddTab("Anti Entities");
@@ -376,5 +378,4 @@ local Toggle = OMG6:AddButton({
 			end
 		end
 	end
-end
 })
