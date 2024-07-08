@@ -1,6 +1,6 @@
 --// Banana \\
 
-game:GetService("Workspace").DescendantAdded:Connect(function(v)if  not _G.AntiBanana then return;end if v.IsA(v,"Part") then if _G.AntiBanana then if (v186.Name=="BananaPeel") then v.CanTouch=false;end end end end);
+game:GetService("Workspace").DescendantAdded:Connect(function(v)if  not _G.AntiBanana then return;end if v.IsA(v,"Part") then if _G.AntiBanana then if (v.Name=="BananaPeel") then v.CanTouch=false;end end end end);
 
 --// Jeff \\
 
@@ -18,6 +18,14 @@ game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if
 --// Open Door Far \\
 
 game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if _G.FarDoors then game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door").ClientOpen:FireServer();end end);end);
+
+--// Eyes \\
+
+if _G.Eyes then
+game:GetService("RunService").RenderStepped:Connect(function()
+				game:GetService("ReplicatedStorage").RemotesFolder.MotorReplication:FireServer(0, 90, 0, false)
+	end)
+end
 
 --// FJJ Hub \\
 
