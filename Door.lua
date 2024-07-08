@@ -18,3 +18,7 @@ game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if
 --// Open Door Far \\
 
 game:GetService("RunService").RenderStepped:Connect(function()pcall(function()if _G.FarDoors then game.workspace.CurrentRooms[tostring(game:GetService("ReplicatedStorage").GameData.LatestRoom.Value)]:WaitForChild("Door").ClientOpen:FireServer();end end);end);
+
+--// FJJ Hub \\
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
