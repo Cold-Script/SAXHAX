@@ -124,18 +124,7 @@ else
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
   end
 end})
-Main:AddToggle("",{Text="Hitbox Enemies Invisible [ U cant kill equal gun ]",Callback=function(value)
-if value
-for _,v in pairs(workspace.Enemies:GetChildren()) do
-		HumanoidRootPart.Size = Vector3.new(30,30,30)
-		HumanoidRootPart.Transparency = 1
-	end
-else
-	for _,v in pairs(workspace.Enemies:GetChildren()) do
-		HumanoidRootPart.Size = Vector3.new(1,1,1)
-		HumanoidRootPart.Transparency = 1
-	        end
-	end
+
 end})
 Main:AddToggle("",{Text="God Mode Enemies But No Fly",Callback=function(value)
 if value then
@@ -170,7 +159,14 @@ Main:AddButton({Text="Noclip",Func=function()
 
 	noclip() -- to toggle noclip() and clip()
 end})
- 
+ Main:AddButton({Text="Hitbox Invisible",DoubleClick=true,Func=function()
+while wait(1) do
+for _,v in pairs(workspace.Enemies:GetChildren()) do
+		HumanoidRootPart.Size = Vector3.new(30,30,30)
+		HumanoidRootPart.Transparency = 1
+	end
+    end
+end})
  Main:AddButton({Text="Reset Character",Func=function()
 game.Players.LocalPlayer.Character.Humanoid.Health =  0
 end})
