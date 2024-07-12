@@ -99,16 +99,6 @@ ESP(v,"Fragment")
      end
 end
 end})
- Main:AddButton({Text="ESP Enemies",Func=function()
-w = workspace
-g = game
-r = g.ReplicatedStorage
-for _,v in pairs(workspace:GetDescendants()) do
-if v.Name == "Enemies" then
-billboard(v,"Enemies")
-     end
-end
-end})
  
  local Main = Tab:AddRightGroupbox("Players")
 Main:AddToggle("",{Text="Instant Enable FOV",Callback=function(value)
@@ -133,6 +123,19 @@ game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
 else
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
   end
+end})
+Main:AddToggle("",{Text="Hitbox Enemies Invisible [ U cant kill equal gun ]",Callback=function(value)
+if value
+for _,v in pairs(workspace.Enemies:GetChildren()) do
+		HumanoidRootPart.Size = Vector3.new(30,30,30)
+		HumanoidRootPart.Transparency = 1
+	end
+else
+	for _,v in pairs(workspace.Enemies:GetChildren()) do
+		HumanoidRootPart.Size = Vector3.new(1,1,1)
+		HumanoidRootPart.Transparency = 1
+	        end
+	end
 end})
 Main:AddToggle("",{Text="God Mode Enemies But No Fly",Callback=function(value)
 if value then
